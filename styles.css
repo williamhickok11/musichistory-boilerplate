@@ -1,3 +1,92 @@
 section {
-	background: red;
+	border: 2px solid black;
 }
+
+body ul {
+	list-style-type: none;
+}
+
+/*-------NAVIGATION BAR--------*/
+
+.top {
+	background: #FFB4B0;
+	margin-bottom: 12px;
+	width: 612px;
+}
+
+.top ul li {
+	display: inline;
+}
+
+/*-------BLUE BOX--------*/
+
+.left {
+	background: #4DD7FA;
+	float: left;
+	width: 180px;
+	height: 400px;
+	margin-right: 12px;
+}
+
+.left select {
+	width: 75%;
+}
+
+.left ul {
+	padding-left: 20px;
+}
+
+.left ul li {
+	padding-bottom:5px;
+}
+
+.checkbox-list div {
+	display: inline;
+	
+}
+
+.right-side ul {
+	float: right;
+	padding-left: 0px;
+	margin-left: 0px;
+	padding-right: 7px;
+}
+
+.left-side ul {
+	float: left;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+
+
+button {
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+select {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+/*-------YELLOW BOX--------*/
+
+.right {
+	background: #FEFAC0;
+	float: left;
+	width: 415px;
+	height: 400px;
+}
+
+.right ul li {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+
+
+
+
+
+

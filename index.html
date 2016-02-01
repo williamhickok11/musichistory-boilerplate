@@ -10,8 +10,8 @@
 <body>
 	<section class="top">
 		<ul>
-			<li> <a href="#">View Music</a></li>
-			<li> <a href="#">Add Music</a></li>
+			<li> <a href="#">View Music</a> <b>|</b></li>
+			<li> <a href="#">Add Music</a> <b>|</b></li>
 			<li> <a href="#">Profile</a></li>
 		</ul>
 	</section>
@@ -19,23 +19,84 @@
 	<section class="left">
 		<ul>
 			<li>Song length:</li>
+				<input type="range"  min="0" max="100" />
+
 			<li>Artist:</li>
+				<select name="mydropdown">
+					<option value="PhonX">PhonX</option>
+					<option value="Debussy">Debussy</option>
+					<option value="Datsik">Datsik</option>
+					<option value="Rachmaninoff">Rachmaninoff</option>
+					<option value="Cher">Cher</option>
+				</select>
+
 			<li>Album:</li>
-			<li>Genre:</li>
+			<div class="drop-down">
+				<select name="mydropdown2">
+						<option value="Rasta">Rasta</option>
+						<option value="Imp Lit">Imp Lit</option>
+						<option value="Let it Burn">Let it Burn</option>
+						<option value="Classic Lit">Classic Lit</option>
+						<option value="Believe">Believe</option>
+					</select>
+			</div>
+			
+			<li>Genre:<br></li>
+				<span class="checkbox-list">
+					
+					
+					<div class="left-side">
+						<ul>
+							<li>
+								<input type="checkbox" name="feedback" value="Rock"> Rock
+							</li>
+							<li>
+								<input type="checkbox" name="feedback" value="Pop"> Pop
+							</li>
+							<li>
+								<input type="checkbox" name="feedback" value="Impres"> Impres
+							</li>
+						</ul>
+					</div>
+					<div class="right-side">
+						<ul>
+							<li>
+							<input type="checkbox" name="feedback" value="Classical"> Classical
+							</li>
+							<li>
+							<input type="checkbox" name="feedback" value="Dubstep"> Dubstep
+							</li>
+							<li>
+								<input type="checkbox" name="feedback" value="Hip hop"> Hip Hop
+							</li>
+						</ul>
+					</div>
+				</span>
+			<button>Filter</button>
 		</ul>
 	</section>
 	
 	<section class="right">
-		<ul>
-			<li>PhonX</li>
-			<li>Debussy</li>	
-			<li>Datsik</li>	
-			<li>Rachmaninoff</li>	
+		<ul id ="newSongs">
+			<li>I'm A Legacy</li>
+			<p>PhonX  |  Rasta  |  DubStep</p>
+			<li>Prelude to the Afternoon of a Faun</li>	
+			<p>Debussy  |  Imp Lit  |  Impressionistic</p>
+			<li>Annihilate</li>	
+			<p>Datsik  |  Let it Burn  |  DubStep</p>
+			<li>Symphonic Dances</li>	
+			<p>Rachmaninoff  |  Classic Lit  |  Classical</p>
 			<li>Cher</li>	
+			<p>Cher  |  Believe  |  Dance-Pop</p>
 		</ul>
-	</section>
-	
+		<!-- <div id="newSongs">
 
+		</div> -->
+	</section>
+
+	
+	
+	<script src="songs.js"></script>
 </body>
 </html>
 
