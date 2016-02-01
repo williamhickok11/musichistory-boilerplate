@@ -8,51 +8,51 @@ body ul {
 
 /*-------NAVIGATION BAR--------*/
 
-.top {
+#top {
 	background: #FFB4B0;
 	margin-bottom: 12px;
 	width: 612px;
 }
 
-.top ul li {
+#top ul li {
 	display: inline;
 }
 
 /*-------BLUE BOX--------*/
 
-.left {
+#left {
 	background: #4DD7FA;
 	float: left;
 	width: 180px;
-	height: 400px;
+	height: 600px;
 	margin-right: 12px;
 }
 
-.left select {
+#left select {
 	width: 75%;
 }
 
-.left ul {
+#left ul {
 	padding-left: 20px;
 }
 
-.left ul li {
+#left ul li {
 	padding-bottom:5px;
 }
 
-.checkbox-list div {
+#checkbox-list div {
 	display: inline;
 	
 }
 
-.right-side ul {
+#right-side ul {
 	float: right;
 	padding-left: 0px;
 	margin-left: 0px;
 	padding-right: 7px;
 }
 
-.left-side ul {
+#left-side ul {
 	float: left;
 	padding-left: 0px;
 	margin-left: 0px;
@@ -72,17 +72,54 @@ select {
 
 /*-------YELLOW BOX--------*/
 
-.right {
+#right {
 	background: #FEFAC0;
 	float: left;
 	width: 415px;
-	height: 400px;
+	height: 600px;
 }
 
-.right ul li {
+#right ul li {
 	font-size: 20px;
 	font-weight: 900;
 }
+
+
+/*-------DISPLAY CHANGE--------*/
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+#addMusicSection {
+	text-align: center;
+	width: 612px;
+}
+
+#addMusicSection p {
+	
+}
+
+
+
+button {
+	margin-bottom: 20px;
+	margin-right: 0;
+	margin-left: 0;
+	padding: 0;
+}
+
+
+
+
+
 
 
 

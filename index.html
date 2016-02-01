@@ -8,15 +8,15 @@
 </head>
 
 <body>
-	<section class="top">
+	<section id="top">
 		<ul>
-			<li> <a href="#">View Music</a> <b>|</b></li>
-			<li> <a href="#">Add Music</a> <b>|</b></li>
+			<li id="viewMusic"> <a href="#">View Music</a> <b>|</b></li>
+			<li id="addMusic"> <a href="#">Add Music</a> <b>|</b></li>
 			<li> <a href="#">Profile</a></li>
 		</ul>
 	</section>
 	
-	<section class="left">
+	<section id="left">
 		<ul>
 			<li>Song length:</li>
 				<input type="range"  min="0" max="100" />
@@ -31,7 +31,7 @@
 				</select>
 
 			<li>Album:</li>
-			<div class="drop-down">
+			<div id="drop-down">
 				<select name="mydropdown2">
 						<option value="Rasta">Rasta</option>
 						<option value="Imp Lit">Imp Lit</option>
@@ -42,10 +42,10 @@
 			</div>
 			
 			<li>Genre:<br></li>
-				<span class="checkbox-list">
+				<span id="checkbox-list">
 					
 					
-					<div class="left-side">
+					<div id="left-side">
 						<ul>
 							<li>
 								<input type="checkbox" name="feedback" value="Rock"> Rock
@@ -58,7 +58,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="right-side">
+					<div id="right-side">
 						<ul>
 							<li>
 							<input type="checkbox" name="feedback" value="Classical"> Classical
@@ -76,7 +76,7 @@
 		</ul>
 	</section>
 	
-	<section class="right">
+	<section id="right">
 		<ul id ="newSongs">
 			<li>I'm A Legacy</li>
 			<p>PhonX  |  Rasta  |  DubStep</p>
@@ -94,9 +94,36 @@
 		</div> -->
 	</section>
 
+	<section id="addMusicSection" class="hidden">
+		<div class="fullBox">
+			<p>Song name</p>
+			<div class="inputBox">
+				<input id="songName" type="text">
+			</div>
+		</div>
+
+		<div class="fullBox">
+			<p>Artist</p>
+			<div class="inputBox">
+				<input id="artistName" type="text">
+			</div>
+		</div>
+
+		<div class="fullBox">
+			<p>Album</p>
+			<div class="inputBox">
+				<input id="albumName" type="text">
+			</div>
+		</div>
+
+		<button id="button">Add</button>
+
+	</section>
+
 	
 	
 	<script src="songs.js"></script>
+	<script src="listMusic.js"></script>
 </body>
 </html>
 
