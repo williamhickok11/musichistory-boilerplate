@@ -4,124 +4,126 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<section id="top">
-		<ul>
-			<li id="viewMusic"> <a href="#">View Music</a> <b>|</b></li>
-			<li id="addMusic"> <a href="#">Add Music</a> <b>|</b></li>
-			<li> <a href="#">Profile</a></li>
-		</ul>
-	</section>
+
+	<ul class="nav nav-tabs">
+  <li id="viewMusic" role="presentation"><a href="#">View Music</a></li>
+  <li id="addMusic" role="presentation"><a href="#">Add Music</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+</ul>
 	
-	<section id="left">
-		<ul>
-			<li>Song length:</li>
-				<input type="range"  min="0" max="100" />
+	<div class="container">
+		<section id="left">
+			<ul>
+				<h3>Song length:</h3>
+					<input type="range"  min="0" max="100" />
 
-			<li>Artist:</li>
-				<select name="mydropdown">
-					<option value="PhonX">PhonX</option>
-					<option value="Debussy">Debussy</option>
-					<option value="Datsik">Datsik</option>
-					<option value="Rachmaninoff">Rachmaninoff</option>
-					<option value="Cher">Cher</option>
-				</select>
+				<h3>Artist:</h3>
+					<select class="form-control">
+						<option selected disabled>Select Artist</option>
+					  <option value="PhonX">PhonX</option>
+						<option value="Debussy">Debussy</option>
+						<option value="Datsik">Datsik</option>
+						<option value="Rachmaninoff">Rachmaninoff</option>
+						<option value="Cher">Cher</option>
+					</select>
 
-			<li>Album:</li>
-			<div id="drop-down">
-				<select name="mydropdown2">
+				<h3>Album:</h3>
+					<select class="form-control">
+						<option selected disabled>Select Album</option>
 						<option value="Rasta">Rasta</option>
 						<option value="Imp Lit">Imp Lit</option>
 						<option value="Let it Burn">Let it Burn</option>
 						<option value="Classic Lit">Classic Lit</option>
 						<option value="Believe">Believe</option>
 					</select>
+				
+				<h3>Genre:<br></h3>
+					<span id="checkbox-list">
+						
+						
+						<div id="left-side">
+							<ul>
+								<li>
+									<input type="checkbox" name="feedback" value="Rock"> Rock
+								</li>
+								<li>
+									<input type="checkbox" name="feedback" value="Pop"> Pop
+								</li>
+								<li>
+									<input type="checkbox" name="feedback" value="Impres"> Impres
+								</li>
+							</ul>
+						</div>
+						<div id="right-side">
+							<ul>
+								<li>
+								<input type="checkbox" name="feedback" value="Classical"> Classical
+								</li>
+								<li>
+								<input type="checkbox" name="feedback" value="Dubstep"> Dubstep
+								</li>
+								<li>
+									<input type="checkbox" name="feedback" value="Hip hop"> Hip Hop
+								</li>
+							</ul>
+						</div>
+					</span>
+				<button type="button" class="btn btn-success">Success</button>
+			</ul>
+		</section>
+		
+		<section id="right">
+			<div id ="songList">
+				<h3>I'm A Legacy</h3>
+				<p>PhonX  |  Rasta  |  DubStep</p>
+				<h3>Prelude to the Afternoon of a Faun</h3>	
+				<p>Debussy  |  Imp Lit  |  Impressionistic</p>
+				<h3>Annihilate</h3>	
+				<p>Datsik  |  Let it Burn  |  DubStep</p>
+				<h3>Symphonic Dances</h3>	
+				<p>Rachmaninoff  |  Classic Lit  |  Classical</p>
+				<h3>Cher</h3>	
+				<p>Cher  |  Believe  |  Dance-Pop</p>
 			</div>
-			
-			<li>Genre:<br></li>
-				<span id="checkbox-list">
-					
-					
-					<div id="left-side">
-						<ul>
-							<li>
-								<input type="checkbox" name="feedback" value="Rock"> Rock
-							</li>
-							<li>
-								<input type="checkbox" name="feedback" value="Pop"> Pop
-							</li>
-							<li>
-								<input type="checkbox" name="feedback" value="Impres"> Impres
-							</li>
-						</ul>
-					</div>
-					<div id="right-side">
-						<ul>
-							<li>
-							<input type="checkbox" name="feedback" value="Classical"> Classical
-							</li>
-							<li>
-							<input type="checkbox" name="feedback" value="Dubstep"> Dubstep
-							</li>
-							<li>
-								<input type="checkbox" name="feedback" value="Hip hop"> Hip Hop
-							</li>
-						</ul>
-					</div>
-				</span>
-			<button>Filter</button>
-		</ul>
-	</section>
-	
-	<section id="right">
-		<ul id ="newSongs">
-			<li>I'm A Legacy</li>
-			<p>PhonX  |  Rasta  |  DubStep</p>
-			<li>Prelude to the Afternoon of a Faun</li>	
-			<p>Debussy  |  Imp Lit  |  Impressionistic</p>
-			<li>Annihilate</li>	
-			<p>Datsik  |  Let it Burn  |  DubStep</p>
-			<li>Symphonic Dances</li>	
-			<p>Rachmaninoff  |  Classic Lit  |  Classical</p>
-			<li>Cher</li>	
-			<p>Cher  |  Believe  |  Dance-Pop</p>
-		</ul>
-		<!-- <div id="newSongs">
 
-		</div> -->
-	</section>
 
-	<section id="addMusicSection" class="hidden">
-		<div class="fullBox">
-			<p>Song name</p>
-			<div class="inputBox">
-				<input id="songName" type="text">
+		</section>
+
+		<section id="addMusicSection" class="hidden">
+			<div class="fullBox">
+				<p>Song name</p>
+				<div class="inputBox">
+					<input id="songName" type="text">
+				</div>
 			</div>
-		</div>
 
-		<div class="fullBox">
-			<p>Artist</p>
-			<div class="inputBox">
-				<input id="artistName" type="text">
+			<div class="fullBox">
+				<p>Artist</p>
+				<div class="inputBox">
+					<input id="artistName" type="text">
+				</div>
 			</div>
-		</div>
 
-		<div class="fullBox">
-			<p>Album</p>
-			<div class="inputBox">
-				<input id="albumName" type="text">
+			<div class="fullBox">
+				<p>Album</p>
+				<div class="inputBox">
+					<input id="albumName" type="text">
+				</div>
 			</div>
-		</div>
 
-		<button id="button">Add</button>
+			<button class="btn btn-default" type="submit">Add Music</button>
 
-	</section>
 
-	
-	
+		</section>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="songs.js"></script>
 	<script src="listMusic.js"></script>
 </body>

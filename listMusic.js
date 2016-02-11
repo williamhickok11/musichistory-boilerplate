@@ -39,13 +39,20 @@ var addMusicFun = function() {
   var userAlbumName = document.getElementById("albumName").value;
   console.log("userAlbumName", userAlbumName);
 
-  addNewSongs.innerHTML += "<li>" + userSongName + "</li>";
-  addNewSongs.innerHTML += "<p>" + userArtistName + "  |  " + userAlbumName + "</p>"
-
+  if (userArtistName === "" || userAlbumName === "" || userSongName === "") {
+    alert("Please enter the required fields.")
+    return;
+  } else {
+    addNewSongs.innerHTML += "<li>" + userSongName + "</li>";
+    addNewSongs.innerHTML += "<p>" + userArtistName + "  |  " + userAlbumName + "</p>";
+    document.getElementById("songName").value = "";
+    document.getElementById("artistName").value = "";
+    document.getElementById("albumName").value = "";
+  }
 };
 
 
-document.getElementById("button").addEventListener("click", addMusicFun)
+document.getElementsByClassName("btn btn-default")[0].addEventListener("click", addMusicFun)
 
 
 

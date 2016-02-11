@@ -1,3 +1,7 @@
+.container {
+	width: 1000px;
+}
+
 section {
 	border: 2px solid black;
 }
@@ -23,9 +27,10 @@ body ul {
 #left {
 	background: #4DD7FA;
 	float: left;
-	width: 180px;
+	width: 200px;
 	height: 600px;
 	margin-right: 12px;
+	margin-top: 15px;
 }
 
 #left select {
@@ -33,7 +38,9 @@ body ul {
 }
 
 #left ul {
+	padding-top: 10px;
 	padding-left: 20px;
+	padding-right: 10px;
 }
 
 #left ul li {
@@ -45,10 +52,9 @@ body ul {
 	
 }
 
-#right-side ul {
-	float: right;
-	padding-left: 0px;
-	margin-left: 0px;
+#songList {
+	padding-left: 10px;
+	margin-left: 10px;
 	padding-right: 7px;
 }
 
@@ -58,17 +64,22 @@ body ul {
 	margin-left: 0px;
 }
 
-
-
-button {
+.btn {
+	margin-left: 36px;
 	margin-top: 20px;
-	margin-left: 40px;
 }
 
 select {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
+
+.form-control {
+	width: 120px;
+}
+
+
 
 /*-------YELLOW BOX--------*/
 
@@ -77,6 +88,7 @@ select {
 	float: left;
 	width: 415px;
 	height: 600px;
+	margin-top: 15px;
 }
 
 #right ul li {
@@ -103,10 +115,6 @@ select {
 	width: 612px;
 }
 
-#addMusicSection p {
-	
-}
-
 
 
 button {
@@ -116,7 +124,10 @@ button {
 	padding: 0;
 }
 
+nav {
+	background-color: #FFB4B0;
 
+}
 
 
 
