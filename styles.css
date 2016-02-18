@@ -52,7 +52,7 @@ body ul {
 	
 }
 
-#songList {
+.songList {
 	padding-left: 10px;
 	margin-left: 10px;
 	padding-right: 7px;
@@ -83,6 +83,10 @@ select {
 
 /*-------YELLOW BOX--------*/
 
+.col-md-4 {
+	display: block;
+}
+
 #right {
 	background: #FEFAC0;
 	float: left;
@@ -96,6 +100,10 @@ select {
 	font-weight: 900;
 }
 
+.btn-link {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
 
 /*-------DISPLAY CHANGE--------*/
 .visible {
@@ -113,15 +121,6 @@ select {
 #addMusicSection {
 	text-align: center;
 	width: 612px;
-}
-
-
-
-button {
-	margin-bottom: 20px;
-	margin-right: 0;
-	margin-left: 0;
-	padding: 0;
 }
 
 nav {

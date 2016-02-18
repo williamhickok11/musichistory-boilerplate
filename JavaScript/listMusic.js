@@ -28,7 +28,8 @@ viewMusic.addEventListener("click", function(){
 
 
 var addMusicFun = function() {
-  var addNewSongs = document.getElementById("newSongs");
+  var addNewSongs = document.getElementById("container");
+  console.log("addNewSongs", addNewSongs);
 
   var userSongName = document.getElementById("songName").value;
   console.log("userSongName", userSongName);
@@ -43,8 +44,8 @@ var addMusicFun = function() {
     alert("Please enter the required fields.")
     return;
   } else {
-    addNewSongs.innerHTML += "<li>" + userSongName + "</li>";
-    addNewSongs.innerHTML += "<p>" + userArtistName + "  |  " + userAlbumName + "</p>";
+    addNewSongs.innerHTML += "<h3>" + userSongName + "</h3>";
+    addNewSongs.innerHTML += "<h4>" + userArtistName + "  |  " + userAlbumName + "</h4>";
     document.getElementById("songName").value = "";
     document.getElementById("artistName").value = "";
     document.getElementById("albumName").value = "";
