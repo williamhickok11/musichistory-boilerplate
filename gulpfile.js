@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var watch = require('gulp-watch');
+var sass = require('gulp-sass');
 
-gulp.task('default', ['lint', 'watch']);
+gulp.task('default', ['lint', 'watch', 'styles']);
 
 gulp.task('watch', function() {
   gulp.watch('./javascripts/**/*.js', ['lint']);
+  gulp.watch('./sass/**/*.scss', ['styles']);
 });
 
 gulp.task('styles', function() {
