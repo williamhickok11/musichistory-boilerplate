@@ -1,35 +1,24 @@
+"use strict";
 var SongIIFE = (function() {
 
   var songArray;
 
   return {
     loadSongs: function (callbackToInvoke) {
-      var loader = new XMLHttpRequest();
-
-      loader.addEventListener("load", function () {
-        // Set the value of the private array
-        var songData = JSON.parse(this.responseText);
-        songArray = songData.songList;
-        console.log(songArray);
-
-        // Invoke the callback function so that the caller knows
-        // that the process is complete. Make sure to pass the 
-        // carnivore array as an argument.
+      $.ajax({
+        url:'musicList.json'
+      }).done(function(data) {
+        songArray = data.songList;
         callbackToInvoke(songArray);
-      });
-
-      loader.open("GET", "musicList.json");
-      loader.send();
+      })
+    },
+    loadSongs2: function (callbackToInvoke) {
+      $.ajax({
+        url:'musicList2.json'
+      }).done(function(data) {
+        songArray = data.songList2;
+        callbackToInvoke(songArray);
+      })
     }
   }
-
-
 })();
-
-
-
-
-
-
-
-

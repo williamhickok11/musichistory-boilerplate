@@ -1,3 +1,15 @@
+body {
+	background-image: url("http://orig12.deviantart.net/657b/f/2013/242/c/d/cddbc13802d7fd5e948293e3b3c0e701-d6kb5a1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#wholeContainer {
+	width: 80%;
+	margin: 0 auto;
+
+}
+
 .container {
 	width: 1000px;
 }
@@ -12,17 +24,48 @@ body ul {
 
 /*-------NAVIGATION BAR--------*/
 
-#top {
-	background: #FFB4B0;
-	margin-bottom: 12px;
-	width: 612px;
-}
+.nav {
 
-#top ul li {
-	display: inline;
 }
 
 /*-------BLUE BOX--------*/
+
+.blueCol {
+	border-radius: 20px;
+}
+
+.col-md-2, .col-md-3 {
+	
+}
+
+.musicRow {
+	border-radius: 30px;
+	background: radial-gradient( ellipse, rgba(255, 0, 0, .8) 0%, rgba(255, 0, 0, .5) 40%, rgba(255, 0, 0, .0) 70%);
+	color: darkgrey;
+	text-shadow: 2px 2px 2px black;
+}
+
+.musicRow:hover {
+	color: grey;
+}
+
+.col-md-12 {
+	text-align: center;
+}
+
+.deleteBtn {
+	text-align: center;
+}
+
+.blueCol {
+	background: radial-gradient( ellipse,rgba(77, 215, 250, .5) 0%, rgba(77, 0, 250, .5) 70%, rgba(0, 0, 0, .0) 100%);
+	color: darkgrey;
+	text-shadow: 1px 2px 2px black;
+}
+
+.checkBoxCol {
+	display: inline-block;
+}
 
 #left {
 	background: #4DD7FA;
@@ -49,7 +92,6 @@ body ul {
 
 #checkbox-list div {
 	display: inline;
-	
 }
 
 .songList {
@@ -105,7 +147,26 @@ select {
 	padding: 0;
 }
 
+/*-------ADD MUSIC--------*/
+
+.userEditInputDes {
+	color: lightgrey;
+	margin-top: 15px;
+}
+
+#addMusicSection {
+	text-shadow: 1px 1px .5px red;
+	text-align: center;
+	margin: 0 auto;
+	width: 612px;
+}
+
+#postNewSong{
+	margin: 20px auto;
+}
+
 /*-------DISPLAY CHANGE--------*/
+
 .visible {
   display: block;
 }
@@ -114,26 +175,14 @@ select {
   display: none;
 }
 
-
-
-
-
-#addMusicSection {
-	text-align: center;
-	width: 612px;
+input {
+	border-radius: 4px;
 }
 
-nav {
-	background-color: #FFB4B0;
-
+#addMore {
+	margin: 50px auto;
+	margin-bottom: 200px;
 }
-
-
-
-
-
-
-
 
 
 

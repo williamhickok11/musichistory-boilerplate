@@ -1,71 +1,52 @@
-var addMusicSection = document.getElementById("addMusicSection");
-var listMusic = document.getElementById("right");
-var filterMusic = document.getElementById("left");
-var addMusic = document.getElementById("addMusic");
-var viewMusic = document.getElementById("viewMusic");
+"use strict";
 
-
-
-addMusic.addEventListener("click", function() {
-  listMusic.classList.add("hidden");
-  filterMusic.classList.add("hidden");
-
-  addMusicSection.classList.add("visible");
-  addMusicSection.classList.remove("hidden");
-
+$("#addMusic").on('click', function(){
+  $('#addMusicSection').removeClass('hidden');
+  $('#bottomContainer').addClass('hidden');
+  $('#largeContainer').addClass('hidden');
 });
 
-viewMusic.addEventListener("click", function(){
-  addMusicSection.classList.add("hidden");
-
-  listMusic.classList.add("visible");
-  listMusic.classList.remove("hidden");
-
-  filterMusic.classList.add("visible");
-  filterMusic.classList.remove("hidden");
+$('#viewMusic').on('click', function(){
+  $('#addMusicSection').addClass('hidden');
+  $('#bottomContainer').removeClass('hidden');
+  $('#largeContainer').removeClass('hidden');
 });
-
-
 
 var addMusicFun = function() {
-  var addNewSongs = document.getElementById("container");
-  console.log("addNewSongs", addNewSongs);
+  var userSongName = $("#userSongName").val();
+  var userArtistName = $("#userArtistName").val();
+  var userAlbumName = $("#userAlbumName").val();
+  var userGenreName = $("#userGenreName").val();
 
-  var userSongName = document.getElementById("songName").value;
-  console.log("userSongName", userSongName);
-
-  var userArtistName = document.getElementById("artistName").value;
-  console.log("userArtistName", userArtistName);
-
-  var userAlbumName = document.getElementById("albumName").value;
-  console.log("userAlbumName", userAlbumName);
-
-  if (userArtistName === "" || userAlbumName === "" || userSongName === "") {
+  if (userArtistName === "" || userAlbumName === "" || userSongName === "" || userGenreName === "") {
     alert("Please enter the required fields.")
     return;
   } else {
-    addNewSongs.innerHTML += "<h3>" + userSongName + "</h3>";
-    addNewSongs.innerHTML += "<h4>" + userArtistName + "  |  " + userAlbumName + "</h4>";
-    document.getElementById("songName").value = "";
-    document.getElementById("artistName").value = "";
-    document.getElementById("albumName").value = "";
+    var newContentString = "";
+    newContentString += "<div class='row musicRow'>";
+      newContentString += "<div class='col-md-12 column'>";
+        newContentString += "<h3>" + userSongName + "</h3>";
+      newContentString += "</div>";
+      newContentString += "<div class='col-md-12 column'>";
+        newContentString += "<h4>" + userArtistName + " | " + userAlbumName + " | " + userGenreName + "</h4>";
+      newContentString += "</div>";
+      newContentString += "<div class='col-md-12 deleteBtn'>";
+        newContentString += '<button type="button" class="btn btn-link">Delete</button>';
+      newContentString += "</div>";
+    newContentString += "</div>";
+    $("#bottomContainer").append(newContentString);
+    $("#userSongName").val("");
+    $("#userArtistName").val("");
+    $("#userAlbumName").val("");
+    $("#userGenreName").val("");
   }
 };
 
-
-document.getElementsByClassName("btn btn-default")[0].addEventListener("click", addMusicFun)
-
-
-
-
-
-
-
-
-
-
-
-
-
+$("#postNewSong").on("click", addMusicFun)
+$(document).keyup(function(){
+  if (event.keyCode === 13) {
+    addMusicFun();
+  }
+});
 
 

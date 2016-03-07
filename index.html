@@ -10,19 +10,17 @@
 
 <body>
 
-	<ul class="nav nav-tabs">
-  <li id="viewMusic" role="presentation"><a href="#">View Music</a></li>
-  <li id="addMusic" role="presentation"><a href="#">Add Music</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-</ul>
-	
-	<div class="container">
-		<section id="left">
-			<ul>
-				<h3>Song length:</h3>
-					<input type="range"  min="0" max="100" />
-
-				<h3>Artist:</h3>
+<div id="wholeContainer">
+		<ul class="nav nav-tabs">
+		  <li id="viewMusic" role="presentation"><a href="#">View Music</a></li>
+		  <li id="addMusic" role="presentation"><a href="#">Add Music</a></li>
+		  <li role="presentation"><a href="#">Profile</a></li>
+		</ul>
+		
+		<div id="largeContainer">
+			<div class="row blueCol">
+				<div class="col-md-2">
+					<h3>Artist:</h3>
 					<select class="form-control">
 						<option selected disabled>Select Artist</option>
 					  <option value="PhonX">PhonX</option>
@@ -31,84 +29,84 @@
 						<option value="Rachmaninoff">Rachmaninoff</option>
 						<option value="Cher">Cher</option>
 					</select>
-
-				<h3>Album:</h3>
-					<select class="form-control">
-						<option selected disabled>Select Album</option>
-						<option value="Rasta">Rasta</option>
-						<option value="Imp Lit">Imp Lit</option>
-						<option value="Let it Burn">Let it Burn</option>
-						<option value="Classic Lit">Classic Lit</option>
-						<option value="Believe">Believe</option>
-					</select>
-				
-				<h3>Genre:<br></h3>
-					<span id="checkbox-list">
-						
-						
-						<div id="left-side">
-							<ul>
-								<li>
-									<input type="checkbox" name="feedback" value="Rock"> Rock
-								</li>
-								<li>
-									<input type="checkbox" name="feedback" value="Pop"> Pop
-								</li>
-								<li>
-									<input type="checkbox" name="feedback" value="Impres"> Impres
-								</li>
-							</ul>
-						</div>
-						<div id="right-side">
-							<ul>
-								<li>
-								<input type="checkbox" name="feedback" value="Classical"> Classical
-								</li>
-								<li>
-								<input type="checkbox" name="feedback" value="Dubstep"> Dubstep
-								</li>
-								<li>
-									<input type="checkbox" name="feedback" value="Hip hop"> Hip Hop
-								</li>
-							</ul>
-						</div>
-					</span>
-				<button type="button" class="btn btn-success">Success</button>
-			</ul>
-		</section>
-		
-		<section id="right">
-			<div class="songList" id="container">
+				</div>
+				<div class="col-md-2">
+					<h3>Album:</h3>
+						<select class="form-control">
+							<option selected disabled>Select Album</option>
+							<option value="Rasta">Rasta</option>
+							<option value="Imp Lit">Imp Lit</option>
+							<option value="Let it Burn">Let it Burn</option>
+							<option value="Classic Lit">Classic Lit</option>
+							<option value="Believe">Believe</option>
+						</select>
+				</div>
+				<div class="col-md-2">
+					<h3>Song length:</h3>
+					<input type="range"  min="0" max="100" />
+				</div>
+				<div class="col-md-3">
+					<h3>Genre:</h3>
+					<div id="checkbox-list">
+						<ul class="checkBoxCol">
+							<li><input type="checkbox" name="feedback" value="Rock"> Rock</li>
+							<li><input type="checkbox" name="feedback" value="Pop"> Pop</li>
+							<li><input type="checkbox" name="feedback" value="Impres"> Impres</li>
+						</ul>
+						<ul class="checkBoxCol">
+							<li><input type="checkbox" name="feedback" value="Classical"> Classical</li>
+							<li><input type="checkbox" name="feedback" value="Dubstep"> Dubstep</li>
+							<li><input type="checkbox" name="feedback" value="Hip hop"> Hip Hop</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<button type="button" class="btn btn-success">Success</button>
+				</div>
 			</div>
-		</section>
+		</div>
 
-		<section id="addMusicSection" class="hidden">
+
+
+		<div id="bottomContainer"></div>
+
+		<button id="addMore">More...</button>
+
+
+<!-- SECOND PAGE -->
+		<div id="addMusicSection" class="hidden">
 			<div class="fullBox">
-				<p>Song name</p>
+				<p class="userEditInputDes">Song name</p>
 				<div class="inputBox">
-					<input id="songName" type="text">
+					<input id="userSongName" type="text">
 				</div>
 			</div>
 
 			<div class="fullBox">
-				<p>Artist</p>
+				<p class="userEditInputDes">Artist</p>
 				<div class="inputBox">
-					<input id="artistName" type="text">
+					<input id="userArtistName" type="text">
 				</div>
 			</div>
 
 			<div class="fullBox">
-				<p>Album</p>
+				<p class="userEditInputDes">Album</p>
 				<div class="inputBox">
-					<input id="albumName" type="text">
+					<input id="userAlbumName" type="text">
 				</div>
 			</div>
 
-			<button class="btn btn-default" type="submit">Add Music</button>
+			<div class="fullBox">
+				<p class="userEditInputDes">Genre</p>
+				<div class="inputBox">
+					<input id="userGenreName" type="text">
+				</div>
+			</div>
+			<button id="postNewSong" class="btn btn-default" type="submit">Add Music</button>
+		</div>
 
+</div>
 
-		</section>
-	</div>
 
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

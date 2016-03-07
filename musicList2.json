@@ -1,0 +1,50 @@
+{
+  "songList2": [
+  {
+    "title": "I'm A Legacy",
+    "artist": "PhonX",
+    "album": "Rasta",
+    "genre": "DubStep"
+  },
+  {
+    "title": "Prelude to the Afternoon of a Faun",
+    "artist": "Debussy",
+    "album": "Imp Lit",
+    "genre": "Impressionistic"
+  },
+  {
+    "title": "Annihilate",
+    "artist": "Datsik",
+    "album": "Let it Burn",
+    "genre": "DubStep"
+  },
+  {
+    "title": "Symphonic Dances",
+    "artist": "Rachmaninoff",
+    "album": "Classic Lit",
+    "genre": "Classical"
+  },
+  {
+    "title": "I Believe",
+    "artist": "Cher",
+    "album": "Believe",
+    "genre": "Dance-Pop"
+  },
+  {
+    "title": "Legs",
+    "artist": "ZZTop",
+    "album": "Eliminator",
+    "genre": "Classic Rock"
+  },
+  {
+    "title": "The Logical Song",
+    "artist": "Supertramp",
+    "album": "Breakfast in America",
+    "genre": "Classic Rock"
+  }
+
+  ]
+}
+
+
+
