@@ -2,7 +2,7 @@
 function populatePage (inventory) {
   console.log("Inventory:", inventory);
   var containerEl = document.getElementById("bottomContainer");
-  
+
   //--- Loop through the JSON and build up the DOM --//
   for (var i = 0; i < inventory.length; i++) {
   var contentString = "";
@@ -22,11 +22,11 @@ function populatePage (inventory) {
 }
 
 
-SongIIFE.loadSongs(populatePage);
-$("#addMore").click(function(){
-  SongIIFE.loadSongs2(populatePage);
-  
-});
+// SongIIFE.loadSongs(populatePage);
+// $("#addMore").click(function(){
+//   SongIIFE.loadSongs2(populatePage);
+
+// });
 
 
 // Part One

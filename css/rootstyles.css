@@ -19,7 +19,9 @@ body ul {
 /*-------NAVIGATION BAR--------*/
 /*-------BLUE BOX--------*/
 .blueCol {
-  border-radius: 20px; }
+  border-radius: 20px;
+  padding-bottom: 10px;
+  text-align: center; }
 
 .musicRow {
   border-radius: 30px;

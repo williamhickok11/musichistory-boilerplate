@@ -42,11 +42,57 @@ var addMusicFun = function() {
   }
 };
 
-$("#postNewSong").on("click", addMusicFun)
-$(document).keyup(function(){
-  if (event.keyCode === 13) {
-    addMusicFun();
+
+
+// HERE IS SOME FIREBASE STUFF //
+
+$("#postNewSong").click(function(e) {
+
+  var newSong = {
+    "title": $("#userSongName").val(),
+    "artist": $("#userArtistName").val(),
+    "album": $("#userAlbumName").val(),
+    "genre": $("#userGenreName").val(),
   }
+  $.ajax({
+    url: "https://blinding-inferno-201.firebaseio.com/songList/.json",
+    method: "POST",
+    data: JSON.stringify(newSong)
+  }).done(function(addSong) {
+    console.log("newSong", newSong);
+    $("#userSongName").val("");
+    $("#userArtistName").val("");
+    $("#userAlbumName").val("");
+    $("#userGenreName").val("");
+  });
 });
+
+
+
+// TRY TO DELETE
+// curl -X DELETE \
+//   'https://samplechat.firebaseio-demo.com/users/jack/name/last.json'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
