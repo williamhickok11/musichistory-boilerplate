@@ -35,10 +35,7 @@ function getSongs () {
     // Object.keys(songList).forEach((key) => {
     //   songList[key]
     // })
-
     // or
-
-
     var songContentArray = [];
     var contentString = "";
     for (let song in songList) {

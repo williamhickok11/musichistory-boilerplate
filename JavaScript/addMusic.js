@@ -1,25 +1,25 @@
-"use strict";
-function populatePage (inventory) {
-  console.log("Inventory:", inventory);
-  var containerEl = document.getElementById("bottomContainer");
+// "use strict";
+// function populatePage (inventory) {
+//   console.log("Inventory:", inventory);
+//   var containerEl = document.getElementById("bottomContainer");
 
-  //--- Loop through the JSON and build up the DOM --//
-  for (var i = 0; i < inventory.length; i++) {
-  var contentString = "";
-    contentString += "<div class='row musicRow'>";
-      contentString += "<div class='col-md-12 column" + i + "'>";
-        contentString += "<h3>" + inventory[i].title + "</h3>";
-      contentString += "</div>";
-      contentString += "<div class='col-md-12 column" + i + "'>";
-        contentString += "<h4>" + inventory[i].artist + " | " + inventory[i].album + " | " + inventory[i].genre + "</h4>";
-      contentString += "</div>";
-      contentString += "<div class='col-md-12 deleteBtn'>";
-        contentString += '<button type="button" class="btn btn-link deleteBtn">Delete</button>';
-      contentString += "</div>";
-    contentString += "</div>";
-    containerEl.innerHTML += contentString;
-  };
-}
+//   //--- Loop through the JSON and build up the DOM --//
+//   for (var i = 0; i < inventory.length; i++) {
+//   var contentString = "";
+//     contentString += "<div class='row musicRow'>";
+//       contentString += "<div class='col-md-12 column" + i + "'>";
+//         contentString += "<h3>" + inventory[i].title + "</h3>";
+//       contentString += "</div>";
+//       contentString += "<div class='col-md-12 column" + i + "'>";
+//         contentString += "<h4>" + inventory[i].artist + " | " + inventory[i].album + " | " + inventory[i].genre + "</h4>";
+//       contentString += "</div>";
+//       contentString += "<div class='col-md-12 deleteBtn'>";
+//         contentString += '<button type="button" class="btn btn-link deleteBtn">Delete</button>';
+//       contentString += "</div>";
+//     contentString += "</div>";
+//     containerEl.innerHTML += contentString;
+//   };
+// }
 
 
 // SongIIFE.loadSongs(populatePage);
