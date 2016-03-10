@@ -10,14 +10,41 @@
 
 <body>
 
-<div id="wholeContainer">
-		<ul class="nav nav-tabs">
+
+<!-- When the user first opens the application, there should be a username and password text field, a button labeled "Register", and a button labeled "Login".
+If the user has filled in information in both text fields, and clicks the register button, you are going to create an account in Firebase for that user.
+
+If the user has filled in information in both text fields, and clicks the register button, you are going to authenticate that user. Notice in the docs that Firebase sends back an object into the authData function parameter. That will contain all the information about the user.
+
+In the navigation bar, add a "Log out" link or button.
+When the user clicks on the logout element, you will unauthenticate the user.
+When a user has been successfully authenticated, you can listen to that change of state with the onAuth method.
+When you have authenticated a user, show the music filtering view.
+When the user has been unauthenticated, show the login view again. -->
+
+
+<!-- LOGIN ID -->
+
+
+	<div id="wholeContainer">
+		<div id="sign_up">
+			<div>
+				<input id="sign_up_name" type="text">
+				<input id="sign_up_password" type="text">
+			</div>
+			<div>
+				<button type="button" id="sign_up_BTN" class="btn btn-success">Register</button>
+				<button type="button" id="login_up_BTN" class="btn btn-success">Login</button>
+				<button type="button" id="logout_up_BTN" class="btn btn-success">Logout</button>
+			</div>
+		</div>
+		<ul id="topNav" class="nav nav-tabs hidden">
 		  <li id="viewMusic" role="presentation"><a href="#">View Music</a></li>
 		  <li id="addMusic" role="presentation"><a href="#">Add Music</a></li>
 		  <li role="presentation"><a href="#">Profile</a></li>
 		</ul>
 
-		<div id="largeContainer">
+		<div id="largeContainer" class="hidden">
 			<div class="row blueCol">
 				<div class="col-md-2">
 					<h3>Artist:</h3>
@@ -68,9 +95,8 @@
 
 
 
-		<div id="bottomContainer"></div>
+		<div id="bottomContainer" class="hidden"></div>
 
-		<button id="addMore">More...</button>
 
 
 <!-- SECOND PAGE -->
@@ -107,12 +133,13 @@
 
 </div>
 
-
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="JavaScript/songs.js"></script>
 	<script src="JavaScript/listMusic.js"></script>
 	<script src="JavaScript/addMusic.js"></script>
+	<script src="JavaScript/login.js"></script>
 </body>
 </html>
 

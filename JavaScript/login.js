@@ -39,3 +39,13 @@ $("#login_up_BTN").click(()=>{
     }
   });
 });
+
+$("#logout_up_BTN").click(()=>{
+  ref.unauth();
+})
+
+
+
+
+
+

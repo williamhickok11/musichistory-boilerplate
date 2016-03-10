@@ -17,7 +17,7 @@ var customOpts = {
   debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts)); 
+var b = watchify(browserify(opts));
 
 
 gulp.task('default', ['lint', 'watch', 'styles']);
